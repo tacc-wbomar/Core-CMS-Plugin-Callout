@@ -18,8 +18,6 @@ This plugin renders a "callout" a.k.a. "call to action".
 1. (Optional) Add and nest plugin instances to support extra content.
 1. See plugin render content that matches configuration (and nested plugin instances).
 
-[dcms-picture]: https://github.com/django-cms/djangocms-picture
-
 ## Features
 
 1. Renders title and descritpion in a highlighted block.
@@ -31,6 +29,8 @@ This plugin renders a "callout" a.k.a. "call to action".
     | image | [`djangocms-picture`][dcms-picture] |
 
     </details>
+
+[dcms-picture]: https://github.com/django-cms/djangocms-picture
 
 ## Caveats
 
