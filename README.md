@@ -1,7 +1,7 @@
 ## Texas Advanced Computing Center
 # Django CMS Plugin: "Callout"
 
-This plugin render a "callout" a.k.a. "call to action".
+This plugin renders a "callout" a.k.a. "call to action".
 
 - __`__plugin_name__`__: `taccsite_callout`
 - __`__PluginName__`__: `TaccsiteCallout`
