@@ -1,0 +1,98 @@
+/*
+Callout a.k.a. "Call to Action" (Structure)
+
+Start, interrupt, or end content with a "call to action".
+
+Features:
+- Narrow and wide windows have vertical and horizontal alignment, respectively.
+- For callouts with a figure, the layout is grid-based.
+
+Caveats:
+1. Layout changes at 992px (your app should use CSS suitable to your app).
+2. Image alignment and placement is basic (for sample use only).
+
+Markup:
+<!-- Has Figure, Is Link -->
+<a href="#" class="c-callout c-callout--has-figure c-callout--is-link">
+  <h2 class="c-callout__title">
+    Quick Start Guide
+  </h2>
+  <p class="c-callout__desc">
+    Explore the Frontera User Guide to learn how to get started, see what Frontera offers, and get answers to your questions.
+  </p>
+  <figure class="c-callout__figure">...</figure>
+</a>
+<!-- No Figure, Not Link -->
+<aside class="c-callout">
+  <h2 class="c-callout__title">
+    Quick Start Guide
+  </h2>
+  <p class="c-callout__desc">
+    Explore the Frontera User Guide to learn how to get started, see what Frontera offers, and get answers to your questions.
+  </p>
+</aside>
+
+.c-callout--has-figure - (content) A callout that has media (image, video, etc.)
+.c-callout--is-link - (markup) A callout that is also a hyperlink
+*/
+/* SEE: http://ui-patterns.com/explore?querystring=call+to+action */
+@import url("_imports/tools/media-queries.css");
+
+
+
+
+
+.c-callout {
+  display: grid;
+}
+.c-callout--has-figure {
+  /* See @media queries */
+}
+.c-callout:not(.c-callout--has-figure) {
+  grid-template-areas:
+    'title'
+    'desc';
+}
+.c-callout__figure { grid-area: figure; }
+.c-callout__title { grid-area: title; }
+.c-callout__desc { grid-area: desc; }
+
+@media only screen and (min-width: 992px) {
+  .c-callout {
+    text-align: left;
+  }
+  .c-callout--has-figure {
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      'figure title'
+      'figure desc';
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .c-callout {
+    text-align: center;
+  }
+  .c-callout--has-figure {
+    grid-template-areas:
+      'figure'
+      'title'
+      'desc';
+  }
+
+  /* To "disable" image resize */
+  .c-callout__figure[data-transform],
+  .c-callout__figure[data-transform] img {
+    height: unset !important; /* overwrite inline style tag (via JavaScript) */
+  }
+}
+
+/* To align figure to exact center */
+.c-callout__figure {
+  place-self: center;
+}
+/* To fit any figure content to available horizontal space */
+.c-callout__figure img {
+  max-width: 100%;
+}

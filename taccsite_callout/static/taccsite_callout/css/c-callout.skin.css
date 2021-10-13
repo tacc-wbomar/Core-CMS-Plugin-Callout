@@ -1,0 +1,65 @@
+/*
+Callout a.k.a. "Call to Action" (Skin)
+
+Opinionated styling of a "Callout".
+
+Features:
+- Layout has sample horizontal and vertical spacing.
+- Hyperlink has sample styles for hover and active state.
+*/
+/* SEE: ./c-callout.structure.css */
+
+
+
+
+
+.c-callout {
+  background-color: gainsboro;
+
+  padding: 2em;
+}
+.c-callout--has-figure {
+  column-gap: 2em;
+}
+
+.c-callout__title {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid black;
+
+  font-size: large;
+  font-weight: bold;
+  color: black;
+}
+.c-callout__desc {
+  font-size: medium;
+  color: black;
+}
+.c-callout__figure {
+  margin: 0; /* To override any 3rd-party base styles */
+}
+
+
+
+
+
+/* Link */
+
+/* To remove default UX feedback and set color for custom UI feedback */
+.c-callout--is-link:hover {
+  --accent-color: blue;
+
+  text-decoration: none;
+}
+
+/* To give feedback on link hover and click */
+.c-callout--is-link:hover::before,
+.c-callout--is-link:active::before {
+  outline-offset: 1em;
+}
+.c-callout--is-link:hover::before {
+  outline: 1px solid var(--accent-color);
+}
+.c-callout--is-link:active::before {
+  outline: 1px dotted var(--accent-color);
+}

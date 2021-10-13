@@ -1,56 +1,50 @@
 ## Texas Advanced Computing Center
-# Django CMS Plugin: "Plugin Name"
+# Django CMS Plugin: "Callout"
 
-This plugin [does something].
+This plugin render a "callout" a.k.a. "call to action".
 
-- __`__plugin_name__`__: `taccsite_example`
-- __`__PluginName__`__: `TaccsiteExample`
-- __"Plugin Name"__: "Example"
-
-## For Plugin Developer
-
-After cloning this repository for your plugin:
-
-1. Follow https://github.com/tacc-wbomar/Core-CMS-Plugin/wiki/Core-CMS-Plugin-Development-Quick-Start.
-2. Remove this section from your repository's `README.md`.
-
+- __`__plugin_name__`__: `taccsite_callout`
+- __`__PluginName__`__: `TaccsiteCallout`
+- __"Plugin Name"__: "Callout"
 
 ## Quick Start
 
 1. Follow https://github.com/tacc-wbomar/Core-CMS-Plugin/wiki/Core-CMS-Plugin-Usage-Quick-Start.
 
-> The next steps are sample steps that should be replaced with plugin-specific steps, if any.
-
-2. Any step that is specific to the plugin, such as the steps after this.
-
-    ```
-    # provide minimal example code that may help the reader
-    ```
-
-3. Add a URLconf in your Django project's `urls.py` like this:
-
-    ```
-        url(r'^sysmon/', include('__plugin_name__.urls')),
-    ```
-
-4. Add `__plugin_name_some_prop__` property and value to your Django project's settings:
-
-    ```
-    __plugin_name_some_prop__ = 'specific_value'
-    ```
-
-5. Visit [http://your.project.url.host/some_plugin_url_path/](http://127.0.0.1:8000/ "The URL for your environment may be different than this.").
-
 ## Usage
-
-> This section is sample usage steps that should be replaced with plugin-specific steps, or be removed.
 
 1. Add instance of plugin to a page.
 1. Configure the plugin instance.
-1. See plugin render content that matches configuration.
+1. (Optional) Add and nest plugin instances to support extra content.
+1. See plugin render content that matches configuration (and nested plugin instances).
+
+[dcms-picture]: https://github.com/django-cms/djangocms-picture
 
 ## Features
 
-> This section should describe the feature of the plugin or be removed.
+1. Renders title and descritpion in a highlighted block.
+1. Renders supported, nested plugin instances to incorporate extra content.
+    <details>
 
-…
+    | content | supported by |
+    | :- | :- |
+    | image | [`djangocms-picture`][dcms-picture] |
+
+    </details>
+
+## Caveats
+
+- The "Advanced settings" field "Resize any image to fit" causes image in page preview to disappear after saving the plugin.
+    <details>
+
+    _This is because of a JavaScript race condition. Using a server-side solution would eliminate this caveat. See [TACC/Core-CMS#327](https://github.com/TACC/Core-CMS/issues/327)._
+
+    _The issue is called out in the admin form using user-oriented language._
+
+    </details>
+- Control over image cropping is not supported through the admin form.
+    <details>
+
+    _Cropping options could be implemented via CSS or a feature of https://github.com/django-cms/django-filer. For details, see [TACC/Core-CMS#329](https://github.com/TACC/Core-CMS/issues/329)._
+
+    </details>
