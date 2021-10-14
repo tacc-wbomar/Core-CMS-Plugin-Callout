@@ -51,3 +51,5 @@ This plugin renders a "callout" a.k.a. "call to action".
     </details>
 
 > \* Support is mandatory and plugin is assummed, so plugin is required. This could change in a future release.
+
+[dcms-link]: https://github.com/django-cms/djangocms-link
