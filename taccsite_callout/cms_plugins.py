@@ -2,6 +2,7 @@ from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.utils.translation import gettext_lazy as _
 
+# TODO: Consider only importing if plugin is installed
 from djangocms_link.cms_plugins import LinkPlugin
 
 from taccsite_cms.contrib.helpers import (
@@ -23,6 +24,7 @@ RESIZE_FIGURE_FIELD_NAME = get_model_field_name(TaccsiteCallout, 'resize_figure_
 
 # Plugin
 
+# TODO: Consider only extending if plugin is installed
 @plugin_pool.register_plugin
 class TaccsiteCalloutPlugin(LinkPlugin):
     """
@@ -54,6 +56,7 @@ class TaccsiteCalloutPlugin(LinkPlugin):
                 'title', 'description',
             ),
         }),
+        # TODO: Consider only rendering if plugin is installed
         (_('Link'), {
             'fields': (
                 ('external_link', 'internal_link'),
@@ -102,6 +105,7 @@ class TaccsiteCalloutPlugin(LinkPlugin):
         instance.attributes['class'] = classes
 
         context.update({
+            # TODO: Consider only exposing if plugin is installed
             'link_url': instance.get_link(),
             'link_target': instance.target
         })

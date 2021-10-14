@@ -34,6 +34,7 @@ This plugin renders a "callout" a.k.a. "call to action".
 
 ## Caveats
 
+- Requires [`djangocms_link`][dcms-link].\*
 - The "Advanced settings" field "Resize any image to fit" causes image in page preview to disappear after saving the plugin.
     <details>
 
@@ -48,3 +49,5 @@ This plugin renders a "callout" a.k.a. "call to action".
     _Cropping options could be implemented via CSS or a feature of https://github.com/django-cms/django-filer. For details, see [TACC/Core-CMS#329](https://github.com/TACC/Core-CMS/issues/329)._
 
     </details>
+
+> \* Support is mandatory and plugin is assummed, so plugin is required. This could change in a future release.
