@@ -34,8 +34,8 @@ This plugin renders a "callout" a.k.a. "call to action".
 
 ## Caveats
 
-- Requires [`djangocms_link`][dcms-link].\*
-- The "Advanced settings" field "Resize any image to fit" causes image in page preview to disappear after saving the plugin.
+1. Requires [`djangocms_link`][dcms-link].\*
+1. The "Advanced settings" field "Resize any image to fit" causes image in page preview to disappear after saving the plugin.
     <details>
 
     _This is because of a JavaScript race condition. Using a server-side solution would eliminate this caveat. See [TACC/Core-CMS#327](https://github.com/TACC/Core-CMS/issues/327)._
@@ -43,7 +43,7 @@ This plugin renders a "callout" a.k.a. "call to action".
     _The issue is called out in the admin form using user-oriented language._
 
     </details>
-- Control over image cropping is not supported through the admin form.
+1. Control over image cropping is not supported through the admin form.
     <details>
 
     _Cropping options could be implemented via CSS or a feature of https://github.com/django-cms/django-filer. For details, see [TACC/Core-CMS#329](https://github.com/TACC/Core-CMS/issues/329)._
