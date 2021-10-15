@@ -3,8 +3,8 @@
 
 This plugin renders a "callout" a.k.a. "call to action".
 
-- __`__dist-name__`__: `taccsite_callout`
-- __`__package_name__`__: `taccsite_callout`
+- __`__dist-name__`__: `djangocms-tacc-callout`
+- __`__package_name__`__: `djangocms_tacc_callout`
 - __`__ClassName__`__: `TaccsiteCallout`
 - __"Plugin Name"__: "Callout"
 

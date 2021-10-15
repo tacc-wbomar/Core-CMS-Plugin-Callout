@@ -1,8 +1,8 @@
 {% load cms_tags static %}
 
 {% block before_content %}
-<link rel="stylesheet" href="{% static 'taccsite_callout/css/c-callout.structure.css' %}" />
-<link rel="stylesheet" href="{% static 'taccsite_callout/css/c-callout.skin.css' %}" />
+<link rel="stylesheet" href="{% static 'djangocms_tacc_callout/css/c-callout.structure.css' %}" />
+<link rel="stylesheet" href="{% static 'djangocms_tacc_callout/css/c-callout.skin.css' %}" />
 {% endblock before_content %}
 
 
@@ -52,7 +52,7 @@
 {% block after_content %}
 {% if instance.resize_figure_to_fit %}
 <script type="module">
-  import { SizeContentToFit } from '{% static "taccsite_callout/js/sizeContentToFit.js" %}';
+  import { SizeContentToFit } from '{% static "djangocms_tacc_callout/js/sizeContentToFit.js" %}';
 
   // HACK: TACC/Core-CMS#320: Pause to ensure resize occurs during CMS edit mode
   window.setTimeout(() => {

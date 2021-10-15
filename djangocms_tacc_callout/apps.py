@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 class TaccsiteCalloutConfig(AppConfig):
-    name = 'taccsite_callout'
+    name = 'djangocms_tacc_callout'
     verbose_name = 'Callout'
