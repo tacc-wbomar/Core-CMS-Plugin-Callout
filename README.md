@@ -3,8 +3,9 @@
 
 This plugin renders a "callout" a.k.a. "call to action".
 
-- __`__plugin_name__`__: `taccsite_callout`
-- __`__PluginName__`__: `TaccsiteCallout`
+- __`__dist-name__`__: `taccsite_callout`
+- __`__package_name__`__: `taccsite_callout`
+- __`__ClassName__`__: `TaccsiteCallout`
 - __"Plugin Name"__: "Callout"
 
 ## Quick Start
