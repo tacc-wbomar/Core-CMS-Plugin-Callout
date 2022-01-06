@@ -1,3 +1,7 @@
+:x: __Archived__ — Replaced by https://github.com/TACC/Core-CMS/pull/427
+
+---
+
 ## Texas Advanced Computing Center
 # Django CMS Plugin: "Callout"
 
